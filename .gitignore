@@ -108,3 +108,7 @@ Thumbs.db
 # Logs
 *.log
 logs/
+
+# Test files
+test_images/
+create_test_images.py
