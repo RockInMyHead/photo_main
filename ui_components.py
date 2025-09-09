@@ -11,8 +11,7 @@ from typing import List
 import streamlit as st
 
 from cache import get_thumb_bytes
-from fs_helpers import list_dir
-from utils import human_size, safe_move, log
+from utils import human_size, safe_move, log, list_dir
 
 # Optional dependencies
 try:

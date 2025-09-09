@@ -7,9 +7,19 @@ import socket
 import shutil
 from pathlib import Path
 from datetime import datetime
-from typing import Optional
+from typing import List, Optional
 
 import streamlit as st
+
+
+def list_dir(p: Path) -> List[Path]:
+    """List directory contents sorted by type and name."""
+    try:
+        items = list(p.iterdir())
+    except Exception:
+        return []
+    items.sort(key=lambda x: (x.is_file(), x.name.lower()))
+    return items
 
 
 def ensure_dir(p: Path) -> None:
