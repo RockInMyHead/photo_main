@@ -1,0 +1,4 @@
+"""
+Face Sorter application package.
+"""
+
